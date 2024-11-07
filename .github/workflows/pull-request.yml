@@ -18,5 +18,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: List files in packages directory
+      run: ls -R packages/
+
     - name: Run linting
       run: npm run lint
