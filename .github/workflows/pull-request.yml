@@ -4,28 +4,42 @@ on: pull_request
 
 jobs:
   build:
-    name: Pull request - Lint Only
+    name: Pull request
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      # Check out code with full history and all branches
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensures all branches and commit history are available
 
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: 'npm'
+      - name: Fetch main branch
+        run: git fetch origin main:refs/remotes/origin/main
 
-    - name: Install dependencies
-      run: npm install
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
 
-    - name: Sonar analysis
-      uses: sonarsource/sonarcloud-github-action@master
-      with:
-        projectBaseDir: .
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run linting
-      run: npm run lint
+      - name: Sonar analysis
+        uses: sonarsource/sonarcloud-github-action@master
+        with:
+          projectBaseDir: .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+      - name: Run linting
+        run: npm run lint
+
+      - name: Run tests
+        run: npm test
+
+      - name: Run backstop
+        run: npm run backstop:ci
