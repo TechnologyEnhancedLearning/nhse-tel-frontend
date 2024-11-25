@@ -2,7 +2,7 @@
 
 ## Requirements
 
-To use NHS.UK frontend in your projects with npm you must:
+To use NHS.UK frontend TEL in your projects with npm you must:
 
 1. Have [Node.js](https://nodejs.org/en/) installed. We recommend using the [long-term support (LTS)](https://nodejs.org/en/download/) version of Nodejs, which also includes [npm](https://www.npmjs.com/).
 
@@ -18,7 +18,7 @@ To use NHS.UK frontend in your projects with npm you must:
 
 ## Install dependencies
 
-Install the NHS.UK frontend package into your project:
+Install the NHS.UK frontend TEL package into your project:
 
 ```sh
 npm install nhsuk-frontend --save
@@ -28,7 +28,7 @@ When the installation finishes, the `nhsuk-frontend` package and other dependenc
 
 ## Configuration
 
-You will need to import a couple of things into your project before you can start using NHS.UK frontend:
+You will need to import a couple of things into your project before you can start using NHS.UK frontend TEL:
 
 - [Importing styles](#importing-styles)
 - [Importing JavaScript](#importing-javascript)
@@ -71,7 +71,7 @@ Or to use only the minimum components necessary:
 
 Some of our components require JavaScript to function properly, others need JavaScript to improve the usability and accessibility.
 
-You should include NHS.UK frontend JavaScript in your project to ensure that all users can use it successfully.
+You should include NHS.UK frontend TEL JavaScript in your project to ensure that all users can use it successfully.
 
 Add the following JavaScript to the top of the `<body>` section of your page template:
 
