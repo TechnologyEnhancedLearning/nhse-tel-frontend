@@ -22,7 +22,7 @@ If you are interested in contributing to the NHS.UK frontend TEL, please contact
 
 ## Get in touch
 
-NHS.UK frontend TEL is maintained by NHS England TEL. [Email us](mailto:support@learninghub.nhs.uk) or open a [GitHub issue](https://github.com/nhsuk/nhsuk-frontend-tel/issues/new).
+NHS.UK frontend TEL is maintained by NHS England TEL. [Email us](mailto:support@learninghub.nhs.uk) or open a [GitHub issue](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/issues/new).
 
 ## Licence
 
