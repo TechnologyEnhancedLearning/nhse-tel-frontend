@@ -1,14 +1,16 @@
 # NHS.UK frontend
 
-NHS.UK frontend contains the code you need to start building user interfaces for NHS websites and services.
+NHS.UK frontend TEL extends the NHS.UK frontend with additional components.
 
-## Guidance
+## How to install NHS.UK frontend TEL
 
-Visit the [NHS digital service manual](https://service-manual.nhs.uk/) for examples of components and guidance for when to use them. If we haven’t yet published guidance on the component you want, please [email us](mailto:service-manual@nhs.net) or get in touch on the [NHS digital service manual Slack workspace](https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE).
+### 1. Install with package managers
 
-## How to install
+We recommend that you [install NHS.UK frontend TEL using node package manager (npm)](/docs/installation/installing-with-npm.md).
 
-See the [`nhsuk-frontend` README.md](/packages/nhsuk-frontend/README.md) in the packages directory for details.
+### 2. Install by using compiled files
+
+You can also [install NHS.UK frontend TEL using our compiled files](/docs/installation/installing-compiled.md), if you are not currently using a package manager.
 
 ## Browsers and assistive technology
 
@@ -16,15 +18,11 @@ Visit our [support for browsers and assistive technology](/docs/contributing/bro
 
 ## Contribute
 
-Read our [contributing guidelines](CONTRIBUTING.md) to contribute to NHS.UK frontend.
-
-## Development environment
-
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nhsuk/nhsuk-frontend)
+If you are interested in contributing to the NHS.UK frontend TEL, please contact [support@learninghub.nhs.uk](mailto:support@learninghub.nhs.uk).
 
 ## Get in touch
 
-NHS.UK frontend is maintained by NHS England. [Email us](mailto:service-manual@nhs.net), open a [GitHub issue](https://github.com/nhsuk/nhsuk-frontend/issues/new) or get in touch on the [NHS digital service manual Slack workspace](https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE).
+NHS.UK frontend TEL is maintained by NHS England TEL. [Email us](mailto:support@learninghub.nhs.uk) or open a [GitHub issue](https://github.com/nhsuk/nhsuk-frontend-tel/issues/new).
 
 ## Licence
 
