@@ -39,7 +39,9 @@ jobs:
 
               
       - name: List contents of dist folder
-        run: ls ./dist
+        run: |
+          echo "Dist folder contents:"
+          ls ./dist
 
       - name: Get package version
         id: get_version
