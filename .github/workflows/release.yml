@@ -37,6 +37,10 @@ jobs:
       - name: Run tests
         run: npm test --ignore-scripts
 
+              
+      - name: List contents of dist folder
+        run: ls ./dist
+
       - name: Get package version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/v/}
@@ -55,8 +59,7 @@ jobs:
           draft: false
           prerelease: ${{ contains(steps.get_version.outputs.VERSION, '-') }}
 
-      - name: List contents of dist folder
-        run: ls ./dist
+
 
       - name: Upload release asset
         id: upload-release-asset
