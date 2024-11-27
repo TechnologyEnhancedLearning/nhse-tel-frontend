@@ -4,7 +4,7 @@
   "description": "Used only for the development of NHS.UK frontend, see `packages/nhsuk-frontend/package.json` for the published `package.json`",
   "homepage": "https://nhsuk.github.io/nhsuk-frontend/",
   "bugs": {
-    "url": "https://github.com/nhsuk/nhsuk-frontend/issues"
+    "url": "https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/issues"
   },
   "repository": {
     "type": "git",
