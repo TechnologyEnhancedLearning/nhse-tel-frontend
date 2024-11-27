@@ -1,4 +1,4 @@
-# NHS.UK frontend Changelog
+# NHS.UK frontend TEL Changelog
 
 ## 10.0.0 - 26 August 2025
 
@@ -1589,20 +1589,28 @@ We've made fixes to NHS.UK frontend in the following pull requests:
 - Update header styles so that `.nhsuk-header__search-no-nav` class is no longer needed when header contains a search field but no navigation ([PR 1046](https://github.com/nhsuk/nhsuk-frontend/pull/1046))
 - Update navigation list item padding to vertically align navigation items with width container ([PR 1033](https://github.com/nhsuk/nhsuk-frontend/pull/1033))
 
-## 9.0.1 - 9 October 2024
+First release of the fork, with initial setup and configuration
 
 ### :wrench: **Fixes**
 
-- Fix layout bug where breadcrumb component was changing height when more than one link shown
-- Fix print styling bug with emergency care card ([Issue 533]([https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/533]))
+- Update copyright year and holder for MIT license ([PR 1](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/1)).
+- Create tel folder for components ([PR 2](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/2)).
+- Update documentation and github pages content ([PR 4](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/4)) ([PR 6](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/6)).
+- **Direct commits**:
+  - Update github pages `about.njk` page text and contact info and contributing link ([a621b64](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/a621b6436932d746fe68259e81dc06aaf627c1bc))
+  - Update github pages `index.njk` page to remove link to service manual and update heading text ([5c6660a](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/5c6660a23ea3757bd6b57559d27ca9aeefc05fcb))
+  - Update github pages `examples.njk` page text and link ([20c7ba7](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/20c7ba7545debf133bd78f94da270b83fc5bd4d4))
+  - Update BASE_URL for build_gh_pages in `package.json` ([0bf78f1](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/0bf78f1f90782e8391b0d514716b0cbb8be33534))
+  - Update version in `package.json` ([d438cdc](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/d438cdc5c16b244103006fda6fb2f8870ec7f42b))
+  - Update name in `package.json` ([5e00411](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/5e00411eccdff9f72f0bbecb47d76ef52afa56b8))
 
-## 9.0.0 - 18 September 2024
+### GitHub Workflow
 
 ### :boom: **Breaking changes**
 
-#### Updated back link and breadcrumbs ([PR 1002](https://github.com/nhsuk/nhsuk-frontend/pull/1002))
+  ([PR 5](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/5)).
 
-The breadcrumbs component no longer contains its own `<div class="nhsuk-width-container">` container.
+  **Direct commits** related to GitHub Workflow
 
 Instead, you should move it inside the existing `<div class="nhsuk-width-container">` container for your overall page, but before the `<main>` tag.
 
