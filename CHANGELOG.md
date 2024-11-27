@@ -1596,6 +1596,7 @@ First release of the fork, with initial setup and configuration
 - Update copyright year and holder for MIT license ([PR 1](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/1)).
 - Create tel folder for components ([PR 2](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/2)).
 - Update documentation and github pages content ([PR 4](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/4)) ([PR 6](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/6)).
+- Update description and version and paths in `package.json` ([PR 9](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/9)).
 - **Direct commits**:
   - Update github pages `about.njk` page text and contact info and contributing link ([a621b64](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/a621b6436932d746fe68259e81dc06aaf627c1bc))
   - Update github pages `index.njk` page to remove link to service manual and update heading text ([5c6660a](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/5c6660a23ea3757bd6b57559d27ca9aeefc05fcb))
@@ -1610,7 +1611,7 @@ First release of the fork, with initial setup and configuration
 
   ([PR 5](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/5)).
 
-- Update paths in `PULL_REQUEST_TEMPLATE.md`
+- Update paths in `PULL_REQUEST_TEMPLATE.md` ([PR 8](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/8)).
 
   **Direct commits** related to GitHub Workflow
 
