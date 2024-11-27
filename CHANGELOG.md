@@ -1604,6 +1604,7 @@ First release of the fork, with initial setup and configuration
   - Update BASE_URL for build_gh_pages in `package.json` ([0bf78f1](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/0bf78f1f90782e8391b0d514716b0cbb8be33534))
   - Update version in `package.json` ([d438cdc](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/d438cdc5c16b244103006fda6fb2f8870ec7f42b))
   - Update name in `package.json` ([5e00411](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/5e00411eccdff9f72f0bbecb47d76ef52afa56b8))
+  - Update path in `gulp.js` ([cdfd74c](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/cdfd74ce8248c360a1cb020d8470fc607b4e21c2))
 
 ### GitHub workflow and templates
 
