@@ -1,4 +1,4 @@
-# NHS.UK frontend
+# NHS.UK frontend TEL
 
 NHS.UK frontend TEL extends the NHS.UK frontend with additional components.
 
