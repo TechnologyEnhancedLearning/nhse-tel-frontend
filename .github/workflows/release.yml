@@ -68,8 +68,8 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/nhsuk-frontend-tel-${{ steps.get_version.outputs.VERSION }}.zip
-          asset_name: nhsuk-frontend-tel-${{ steps.get_version.outputs.VERSION }}.zip
+          asset_path: ./dist/nhse-tel-frontend-${{ steps.get_version.outputs.VERSION }}.zip
+          asset_name: nhse-tel-frontend-${{ steps.get_version.outputs.VERSION }}.zip
           asset_content_type: application/zip
 
       - name: Build GitHub pages
