@@ -1,4 +1,4 @@
-﻿namespace NHSUKViewComponents.Web.ViewModels
+namespace NHSUKViewComponents.Web.ViewModels
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -19,6 +19,8 @@
             bool required = false,
             string? placeholder = null,
             string? requiredSideClientErrorMessage = default
+            string? prefix = null
+            string? suffix = null
         )
         {
             var errorMessageList = errorMessages.ToList();
@@ -37,6 +39,8 @@
             HasError = errorMessageList.Any();
             PlaceHolder = placeholder;
             RequiredClientSideErrorMessage = requiredSideClientErrorMessage;
+            Prefix = prefix
+            Suffix = suffix
         }
 
         public string Id { get; set; }
@@ -53,6 +57,8 @@
         public readonly bool HasError;
         public string? PlaceHolder { get; set; }
         public string? RequiredClientSideErrorMessage { get; set; }
+        public string? Prefix { get; set; }
+        public string? Suffix { get; set; }
     }
 
 }
