@@ -1,7 +1,7 @@
-﻿namespace NHSUKViewComponents.Web.ViewComponents
+namespace DotnetViewComponents.ViewComponents.NHS
 {
     using Microsoft.AspNetCore.Mvc;
-    using NHSUKViewComponents.Web.ViewModels;
+    using DotnetViewComponents.ViewModels.NHS;
 
     public class FileInputViewComponent : ViewComponent
     {

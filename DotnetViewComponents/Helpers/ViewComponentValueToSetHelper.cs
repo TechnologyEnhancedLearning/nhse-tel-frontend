@@ -1,4 +1,4 @@
-﻿namespace NHSUKViewComponents.Web.Helpers
+namespace DotnetViewComponents.Helpers
 {
     using System.Collections.Generic;
     using System.Linq;

@@ -1,4 +1,4 @@
-﻿namespace NHSUKViewComponents.Web.Helpers
+namespace DotnetViewComponents.Helpers
 {
     public static class ViewComponentDynamicAttributeHelper
     {

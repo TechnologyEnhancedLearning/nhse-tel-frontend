@@ -1,4 +1,4 @@
-﻿namespace NHSUKViewComponents.Web.Extensions
+namespace DotnetViewComponents.Extensions
 {
     using System;
 

@@ -1,8 +1,8 @@
-﻿namespace NHSUKViewComponents.Web.ViewComponents
+namespace DotnetViewComponents.ViewComponents.NHS
 {
     using System.Linq;
     using Microsoft.AspNetCore.Mvc;
-    using NHSUKViewComponents.Web.ViewModels;
+    using DotnetViewComponents.ViewModels.NHS;
 
     public class SingleCheckboxViewComponent : ViewComponent
     {

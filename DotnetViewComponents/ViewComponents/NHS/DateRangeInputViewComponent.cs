@@ -1,9 +1,9 @@
-﻿namespace NHSUKViewComponents.Web.ViewComponents
+namespace DotnetViewComponents.ViewComponents.NHS
 {
     using System.Linq;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.ModelBinding;
-    using NHSUKViewComponents.Web.ViewModels;
+    using DotnetViewComponents.ViewModels.NHS;
 
     public class DateRangeInputViewComponent : ViewComponent
     {

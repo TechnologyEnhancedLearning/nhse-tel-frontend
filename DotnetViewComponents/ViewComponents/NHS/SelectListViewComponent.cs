@@ -1,9 +1,9 @@
-﻿namespace NHSUKViewComponents.Web.ViewComponents
+﻿namespace DotnetViewComponents.ViewComponents.NHS
 {
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
-    using NHSUKViewComponents.Web.ViewModels;
+    using DotnetViewComponents.ViewModels.NHS;
 
     public class SelectListViewComponent : ViewComponent
     {

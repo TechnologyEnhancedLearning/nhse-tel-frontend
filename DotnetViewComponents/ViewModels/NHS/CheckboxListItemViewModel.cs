@@ -1,4 +1,4 @@
-﻿namespace NHSUKViewComponents.Web.ViewModels
+﻿namespace DotnetViewComponents.ViewModels.NHS
 {
     public class CheckboxListItemViewModel
     {

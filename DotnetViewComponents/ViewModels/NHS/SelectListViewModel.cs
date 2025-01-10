@@ -1,4 +1,4 @@
-﻿namespace NHSUKViewComponents.Web.ViewModels
+﻿namespace DotnetViewComponents.ViewModels.NHS
 {
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc.Rendering;
