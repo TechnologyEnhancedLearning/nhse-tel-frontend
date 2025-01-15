@@ -1,0 +1,12 @@
+node_modules/*
+dist/*
+.cache/*
+.github/*
+coverage/*
+package-lock.json
+package.json
+app/
+docs/
+packages/
+tasks/
+tests/
