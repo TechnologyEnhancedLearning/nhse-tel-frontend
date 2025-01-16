@@ -1,0 +1,27 @@
+@using DotnetViewComponents.Extensions
+@using DotnetViewComponents.ViewModels.NHS
+@model BreadcrumbsModel
+
+@{
+    var lastTitle = "";
+    var lastUrl = "";
+}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <ol class="nhsuk-breadcrumb__list">
+        @foreach (var breacrumb in Model.Breadcrumbs){
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="@breadcrumb.Url">
+                    @breadcrumb.Title
+            </a></li>
+
+            lastTitle = @breadcrumb.Title;
+            lastUrl = @breadcrumb.Url;
+        }
+
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="@lastUrl">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+            @lastTitle
+        </a>
+    </p>
+</nav>
