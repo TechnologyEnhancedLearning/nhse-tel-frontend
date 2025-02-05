@@ -36,7 +36,7 @@ Include the following as a minimum e.g.
 * Browser: Google Chrome
 * Browser version: 59.0.3071.109
 *
-* NHS.UK frontend package version: 1.0.0
+* NHS England TEL frontend package version: 1.0.0
 * Node version: v10.15.0
 * npm version: 6.5.0
 -->
