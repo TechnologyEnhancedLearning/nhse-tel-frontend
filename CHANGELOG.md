@@ -1603,16 +1603,11 @@ Initial setup and configuration
 - Update prettier rule to warn instead of error and comment out PR workflow tests ([PR 14](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/14)).
 - Add NHSDesignSystemViewComponents and add eslintignore to resolve issues with new code ([PR 15](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/15)).
 - Update site widths and breakpoints ([PR 16](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/16)).
-
-
-
-
-
-
+- Update `PULL_REQUEST_TEMPLATE.md` to follow TEL format ([PR 23](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/pull/23)).
 
 - **Direct commits**:
   - Update github pages `BUG_REPORT.md` with correct repo name ([4814339
-](https://github.com/TechnologyEnhancedLearning/nhse-tel-frontend/commit/4814339daedfacaaa45dfefca4ddda013667def5))
+    ](https://github.com/TechnologyEnhancedLearning/nhse-tel-frontend/commit/4814339daedfacaaa45dfefca4ddda013667def5))
   - Update github pages `about.njk` page text and contact info and contributing link ([a621b64](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/a621b6436932d746fe68259e81dc06aaf627c1bc))
   - Update github pages `index.njk` page to remove link to service manual and update heading text ([5c6660a](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/5c6660a23ea3757bd6b57559d27ca9aeefc05fcb))
   - Update github pages `examples.njk` page text and link ([20c7ba7](https://github.com/TechnologyEnhancedLearning/nhsuk-frontend-tel/commit/20c7ba7545debf133bd78f94da270b83fc5bd4d4))
