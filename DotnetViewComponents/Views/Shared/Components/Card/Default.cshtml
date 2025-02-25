@@ -1,0 +1,51 @@
+@using DotnetViewComponents.ViewModels
+@model CardViewModel
+
+@{
+    var secondaryParent = Model.IsSecondary ? "nhsuk-card--secondary" : "";
+    var secondaryContent = Model.IsSecondary ? "nhsuk-card__content--secondary" : "nhsuk-card__content--primary";
+    var headingLevel = Model.HeadingLevel != 2 && (Model.HeadingLevel >= 1 && Model.HeadingLevel <= 6) ? "h" + Model.HeadingLevel : "h2";
+    var headingOpening = $"<{headingLevel} class=\"nhsuk-card__heading nhsuk-heading-m\">";
+    var headingClosing = $"</{headingLevel}>";
+}
+
+<div class="nhsuk-card @(Model.IsClickable ? "nhsuk-card--clickable" : "") @secondaryParent">
+
+    @if (!string.IsNullOrEmpty(Model.ImageSrc))
+    {
+        <img class="nhsuk-card__img" src="@Model.ImageSrc" alt="">
+    }
+
+    <div class="nhsuk-card__content @secondaryContent">
+
+
+        @Html.Raw(headingOpening)
+        @if (Model.IsClickable)
+        {
+            <a class="nhsuk-card__link" href="#">@Model.Title</a>
+        }
+        else
+        {
+            @Model.Title
+        }
+        @Html.Raw(headingClosing)
+
+
+        @if (!string.IsNullOrEmpty(Model.Description))
+        {
+            <p class="nhsuk-card__description">@Html.Raw(@Model.Description)</p>
+        }
+
+
+        @if (Model.HasArrow == true)
+        {
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+                <circle cx="13.333" cy="13.333" r="13.333" fill="" />
+                <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667">
+                    <path d="M15.438 13l-3.771 3.771" />
+                    <path data-name="Path" d="M11.667 9.229L15.438 13" />
+                </g>
+            </svg>
+        }
+    </div>
+</div>
