@@ -1,0 +1,25 @@
+@using DotnetViewComponents.ViewModels
+@model SummaryListViewModel
+
+<dl class="nhsuk-summary-list @(!Model.HasBorder ?  "nhsuk-summary-list--no-border" : "")">
+    @foreach (var listItem in Model.SummaryListItem)
+    {
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                @listItem.Title
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                @listItem.Description
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+                @if (!String.IsNullOrWhiteSpace(@listItem.ActionUrl))
+                {
+                    <a href=@listItem.ActionUrl>
+                        @listItem.ActionName<span class="nhsuk-u-visually-hidden"> @listItem.Title</span>
+                    </a>
+                }
+            </dd>
+        </div>
+    }
+</dl>
