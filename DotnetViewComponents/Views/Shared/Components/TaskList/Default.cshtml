@@ -1,0 +1,63 @@
+@using DotnetViewComponents.ViewModels
+@model TaskListViewModel
+
+<ul class="nhsuk-task-list">
+    @foreach (var task in Model.ListItems)
+    {
+
+        @if (task.StateStyle == TaskStateStyle.COMPLETED)
+        {
+            <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+                <div class="nhsuk-task-list__name-and-hint">
+                    <a class="nhsuk-link nhsuk-task-list__link" href="@task.Url" aria-describedby=@task.Id>
+                        @task.Name
+                    </a>
+                    @if (!String.IsNullOrWhiteSpace(task.HintText))
+                    {
+                        <div id="your-health-3-hint" class="nhsuk-task-list__hint">@task.HintText</div>
+                    }
+                </div>
+                <div class="nhsuk-task-list__status nhsuk-task-list__status--completed" id=@task.Id>
+                    @task.State
+                </div>
+            </li>
+        }
+
+        else if (task.StateStyle == TaskStateStyle.INCOMPLETE)
+        {
+            <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+                <div class="nhsuk-task-list__name-and-hint">
+                    <a class="nhsuk-link nhsuk-task-list__link" href="@task.Url" aria-describedby="your-health-@task.Id-status">
+                        @task.Name
+                    </a>
+                    @if (!String.IsNullOrWhiteSpace(task.HintText))
+                    {
+                        <div id="your-health-3-hint" class="nhsuk-task-list__hint">@task.HintText</div>
+                    }
+                </div>
+                <div class="nhsuk-task-list__status" id="your-health-@task.Id-status">
+                    <strong class="nhsuk-tag nhsuk-tag--blue">
+                        @task.State
+                    </strong>
+                </div>
+            </li>
+        }
+
+        else if (task.StateStyle == TaskStateStyle.UNSTARTED)
+        {
+            <li class="nhsuk-task-list__item">
+                <div class="nhsuk-task-list__name-and-hint">
+                    <div>@task.Name</div>
+                    @if (!String.IsNullOrWhiteSpace(task.HintText))
+                    {
+                        <div id="your-health-3-hint" class="nhsuk-task-list__hint">@task.HintText</div>
+                    }
+                </div>
+                <div class="nhsuk-task-list__status nhsuk-task-list__status--cannot-start-yet" id="your-health-@task.Id-status">
+                    @task.State
+                </div>
+            </li>
+        }
+        
+    }
+</ul>
