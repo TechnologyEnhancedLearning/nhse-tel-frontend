@@ -1,0 +1,6 @@
+@using DotnetViewComponents.ViewModels
+@model ButtonViewModel
+
+<button class="@Model.Styling" data-module="nhsuk-button" @(Model.PreventDoubleClick ? "data-prevent-double-click=true" : "") type="submit">
+    @Model.Text
+</button>
