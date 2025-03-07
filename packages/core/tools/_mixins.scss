@@ -289,3 +289,36 @@
   height: 32px;
   width: 80px;
 }
+
+// Removes the white space above a heading creating equal space visually at the top and bottom of an element without offsetting other margins or padding.
+// Use this when a h1 pr h2 is the first item in a box with equal spacing.
+@mixin tel-adjust-heading-top-margin($size, $override-line-height: false, $important: false) {
+  @if not map-has-key($nhsuk-typography-scale, $size) {
+    @error "Unknown font size `#{$size}` - expected a point from the typography scale.";
+  }
+
+  $font-map: map-get($nhsuk-typography-scale, $size);
+
+  @each $breakpoint, $breakpoint-map in $font-map {
+    $font-size: map-get($breakpoint-map, "font-size");
+
+    $line-height: _nhsuk-line-height(
+      $line-height: if($override-line-height, $override-line-height, map-get($breakpoint-map, "line-height")),
+      $font-size: $font-size
+    );
+
+    @if $breakpoint == null {
+      margin-top: -($line-height - 1) + em;
+      line-height: $line-height;
+    } @else if $breakpoint == "print" {
+      @include govuk-media-query($media-type: print) {
+        line-height: $line-height;
+      }
+    } @else {
+      @include govuk-media-query($from: $breakpoint) {
+        margin-top: -($line-height - 1) + em;
+        line-height: $line-height;
+      }
+    }
+  }
+}
