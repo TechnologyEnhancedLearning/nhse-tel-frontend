@@ -4,6 +4,9 @@ namespace DotnetViewComponents.ViewComponents
     using Microsoft.AspNetCore.Mvc;
     using DotnetViewComponents.ViewModels;
 
+    /// <summary>
+    /// A ViewComponent that renders a footer with links.
+    /// </summary>
     public class FooterViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke(

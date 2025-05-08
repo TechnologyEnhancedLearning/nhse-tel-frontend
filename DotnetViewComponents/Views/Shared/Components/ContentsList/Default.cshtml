@@ -15,7 +15,7 @@
             else
             {
                 <li class="nhsuk-contents-list__item">
-                    <a class="nhsuk-contents-list__link" href="@item.Url">@item.Title</a>
+                    <a class="nhsuk-contents-list__link" asp-controller="@item.AspController" asp-action="@item.AspAction" asp-all-route-data="@item.AspRouteData">@item.Title</a>
                 </li>
             }
         }

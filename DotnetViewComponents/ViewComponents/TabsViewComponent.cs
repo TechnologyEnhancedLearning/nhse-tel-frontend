@@ -4,6 +4,9 @@ namespace DotnetViewComponents.ViewComponents
     using Microsoft.AspNetCore.Mvc;
     using DotnetViewComponents.ViewModels;
 
+    /// <summary>
+    /// A ViewComponent that renders a set of tabs based on the provided title and list of tabs.
+    /// </summary>
     public class TabsViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke(

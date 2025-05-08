@@ -1,8 +1,5 @@
 namespace DotnetViewComponents.ViewModels
 {
-    /// <summary>
-    /// Defines the <see cref="PaginationViewModel" />.
-    /// </summary>
     public class PaginationViewModel
     {
         /// <summary>
@@ -21,10 +18,10 @@ namespace DotnetViewComponents.ViewModels
         /// <param name="nextUrl">Next page url.</param>
         public PaginationViewModel(int currentPage, int totalPage, string prevUrl, string nextUrl)
         {
-            this.CurrentPage = currentPage;
-            this.TotalPage = totalPage;
-            this.PreviousUrl = prevUrl;
-            this.NextUrl = nextUrl;
+            CurrentPage = currentPage;
+            TotalPage = totalPage;
+            PreviousUrl = prevUrl;
+            NextUrl = nextUrl;
         }
 
         /// <summary>

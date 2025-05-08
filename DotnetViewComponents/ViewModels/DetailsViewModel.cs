@@ -1,8 +1,5 @@
 namespace DotnetViewComponents.ViewModels
 {
-    /// <summary>
-    /// Represents the details view model containing summary and content.
-    /// </summary>
     public class DetailsViewModel
     {
         /// <summary>

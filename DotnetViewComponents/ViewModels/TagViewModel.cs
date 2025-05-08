@@ -2,16 +2,27 @@ namespace DotnetViewComponents.ViewModels
 {
     public class TagViewModel
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TagViewModel"/> class.
+        /// </summary>
+        /// <param name="name">The name of the tag.</param>
+        /// <param name="styling">The styling class for the tag. Defaults to <see cref="TagStyle.INPROGRESS"/>.</param>
         public TagViewModel(
             string name,
-            string styling = TagStyle.INPROGRESS)
+            string styling)
         {
             Name = name;
             Styling = styling;
         }
 
+        /// <summary>
+        /// Gets or sets the name of the tag.
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets the styling class for the tag.
+        /// </summary>
         public string? Styling { get; set;}
     }
 

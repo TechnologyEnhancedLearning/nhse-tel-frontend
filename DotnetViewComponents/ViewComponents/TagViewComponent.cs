@@ -3,6 +3,9 @@ namespace DotnetViewComponents.ViewComponents
     using Microsoft.AspNetCore.Mvc;
     using DotnetViewComponents.ViewModels;
 
+    /// <summary>
+    /// A ViewComponent that renders a tag based on the provided name and styling.
+    /// </summary>
     public class TagViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke(

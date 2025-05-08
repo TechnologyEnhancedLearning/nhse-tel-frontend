@@ -12,15 +12,19 @@ namespace DotnetViewComponents.ViewModels
         /// <param name="headingLevel">The HTML heading level for the title. Defaults to <c>2</c>, which results in h2.</param>
         /// <param name="hasArrow">Indicates whether the card should display an arrow. Defaults to <c>false</c>.</param>
         /// <param name="isSecondary">Indicates whether the card is styled as a secondary card. Defaults to <c>false</c>.</param>
-        /// <param name="isClickable">Indicates whether the card is clickable. Defaults to <c>true</c>.</param>
+        /// <param name="aspController">The asp-controller to dynamically set the controller path of the link.</param>
+        /// <param name="aspAction">The asp-action to dynamically set the action path of the link..</param>
+        /// <param name="aspRouteData">The asp-all-route-data to dynamically set the extra parameters to the path of the link.</param>
         public CardViewModel(
             string title,
-            string? description = null,
-            string? imageSrc = null,
-            int headingLevel = 2,
-            bool hasArrow = false,
-            bool isSecondary = false,
-            bool isClickable = true)
+            string? description,
+            string? imageSrc,
+            int headingLevel,
+            bool hasArrow,
+            bool isSecondary,
+            string? aspController,
+            string? aspAction,
+            Dictionary<string, string>? aspRouteData)
         {
             Title = title;
             Description = description;
@@ -28,7 +32,9 @@ namespace DotnetViewComponents.ViewModels
             HeadingLevel = headingLevel;
             HasArrow = hasArrow;
             IsSecondary = isSecondary;
-            IsClickable = isClickable;
+            AspController = aspController;
+            AspAction = aspAction;
+            AspRouteData = aspRouteData;
         }
 
         /// <summary>
@@ -62,8 +68,18 @@ namespace DotnetViewComponents.ViewModels
         public bool IsSecondary { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the card is clickable.
+        /// Gets or sets the asp-controller of the link.
         /// </summary>
-        public bool IsClickable { get; set; }
+        public string? AspController { get; set; }
+
+        /// <summary>
+        /// Gets or sets the asp-action of the link.
+        /// </summary>
+        public string? AspAction { get; set; }
+
+        /// <summary>
+        /// Gets or sets the asp-all-route-data of the link.
+        /// </summary>
+        public Dictionary<string, string>? AspRouteData { get; set; }
     }
 }

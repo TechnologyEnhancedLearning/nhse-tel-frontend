@@ -3,6 +3,9 @@ namespace DotnetViewComponents.ViewComponents
     using Microsoft.AspNetCore.Mvc;
     using DotnetViewComponents.ViewModels;
 
+    /// <summary>
+    /// A ViewComponent that renders pagination controls based on the current page and total pages.
+    /// </summary>
     public class PaginationViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke(

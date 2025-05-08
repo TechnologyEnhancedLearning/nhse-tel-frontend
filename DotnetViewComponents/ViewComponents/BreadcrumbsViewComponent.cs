@@ -9,12 +9,7 @@ namespace DotnetViewComponents.ViewComponents
     /// </summary>
     public class BreadcrumbsViewComponent : ViewComponent
     {
-        /// <summary>
-        /// Invokes the ViewComponent and returns the view with the breadcrumb model.
-        /// </summary>
-        /// <param name="links">A list of tuples representing the breadcrumb links where each tuple contains a title and a URL.</param>
-        /// <returns>An <see cref="IViewComponentResult"/> that renders the breadcrumb view.</returns>
-        public IViewComponentResult Invoke(List<(string Title, string Url)> links)
+        public IViewComponentResult Invoke(List<(string Title, string spController, string aspAction, Dictionary<string, string>? aspRouteData)> links)
         {
             var model = new BreadcrumbsViewModel(links);
 

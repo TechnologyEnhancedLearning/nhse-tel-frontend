@@ -4,6 +4,9 @@ namespace DotnetViewComponents.ViewComponents
     using Microsoft.AspNetCore.Mvc;
     using DotnetViewComponents.ViewModels;
 
+    /// <summary>
+    /// A ViewComponent that renders a table based on the provided title and rows of data.
+    /// </summary>
     public class TableViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke(

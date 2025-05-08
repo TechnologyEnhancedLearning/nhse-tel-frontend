@@ -2,6 +2,7 @@
 @model CardViewModel
 
 @{
+    var isClickable = !string.IsNullOrWhiteSpace(Model.AspController);
     var secondaryParent = Model.IsSecondary ? "nhsuk-card--secondary" : "";
     var secondaryContent = Model.IsSecondary ? "nhsuk-card__content--secondary" : "nhsuk-card__content--primary";
     var headingLevel = Model.HeadingLevel != 2 && (Model.HeadingLevel >= 1 && Model.HeadingLevel <= 6) ? "h" + Model.HeadingLevel : "h2";
@@ -9,7 +10,7 @@
     var headingClosing = $"</{headingLevel}>";
 }
 
-<div class="nhsuk-card @(Model.IsClickable ? "nhsuk-card--clickable" : "") @secondaryParent">
+<div class="nhsuk-card @(isClickable ? "nhsuk-card--clickable" : "") @secondaryParent">
 
     @if (!string.IsNullOrEmpty(Model.ImageSrc))
     {
@@ -20,9 +21,9 @@
 
 
         @Html.Raw(headingOpening)
-        @if (Model.IsClickable)
+        @if (isClickable)
         {
-            <a class="nhsuk-card__link" href="#">@Model.Title</a>
+            <a class="nhsuk-card__link" asp-controller="@Model.AspController" asp-action="@Model.AspAction" asp-all-route-data="@Model.AspRouteData">@Model.Title</a>
         }
         else
         {

@@ -4,6 +4,9 @@ namespace DotnetViewComponents.ViewComponents
     using Microsoft.AspNetCore.Mvc;
     using DotnetViewComponents.ViewModels;
 
+    /// <summary>
+    /// A ViewComponent that renders a "Do" or "Don't" list based on the provided rules.
+    /// </summary>
     public class DoDontListViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke(

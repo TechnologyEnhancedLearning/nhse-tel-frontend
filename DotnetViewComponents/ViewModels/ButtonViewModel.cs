@@ -15,9 +15,9 @@ namespace DotnetViewComponents.ViewModels
         /// <param name="preventDoubleClick">Indicates whether to prevent double-clicking the button. Defaults to <c>false</c>.</param>
         public ButtonViewModel(
             string text,
-            string aspController,
-            string aspAction,
-            Dictionary<string, string> aspRouteData,
+            string? aspController,
+            string? aspAction,
+            Dictionary<string, string>? aspRouteData,
             string styling,
             string style,
             bool preventDoubleClick)
@@ -39,17 +39,17 @@ namespace DotnetViewComponents.ViewModels
         /// <summary>
         /// Gets or sets the asp-controller of the link.
         /// </summary>
-        public string AspController { get; set; }
+        public string? AspController { get; set; }
 
         /// <summary>
-        /// Gets or sets the as-action of the link.
+        /// Gets or sets the asp-action of the link.
         /// </summary>
-        public string AspAction { get; set; }
+        public string? AspAction { get; set; }
 
         /// <summary>
         /// Gets or sets the asp-all-route-data of the link.
         /// </summary>
-        public Dictionary<string, string> AspRouteData { get; set; }
+        public Dictionary<string, string>? AspRouteData { get; set; }
 
         /// <summary>
         /// Gets or sets the styling for the button.

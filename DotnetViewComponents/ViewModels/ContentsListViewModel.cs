@@ -1,8 +1,5 @@
 namespace DotnetViewComponents.ViewModels
 {
-    /// <summary>
-    /// Represents the view model for a contents list component.
-    /// </summary>
     public class ContentsListViewModel
     {
         /// <summary>
