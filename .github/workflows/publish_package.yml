@@ -1,0 +1,64 @@
+name: Publish NuGet Package
+
+on:
+  pull_request:
+      types: [closed]
+
+jobs:
+  nuget_publish:
+    name: Build, Pack, and Publish NuGet Package
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    env:
+      BUILD_CONFIG: "Release"
+      PROJECT_PATH: "DotnetViewComponents/DotnetViewComponents.csproj"
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    strategy:
+      matrix:
+        dotnet-version: ["6.0.x", "8.0.x"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v1.1.1
+        with:
+          versionSpec: '6.0.x'
+
+      - name: Determine Version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v1.1.1
+
+      - name: Display GitVersion outputs
+        run: echo "Calculated Version:${{ steps.gitversion.outputs.semVer }}"
+
+      - name: Setup .NET SDK for Building
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore NuGet packages
+        run: dotnet restore $PROJECT_PATH
+
+      - name: Build project
+        run: dotnet build $PROJECT_PATH --configuration $BUILD_CONFIG --no-restore
+
+      - name: Pack NuGet package
+        run: dotnet pack $PROJECT_PATH --configuration $BUILD_CONFIG --no-build -o out /p:PackageVersion=${{ steps.gitversion.outputs.semVer }}
+
+      - name: Add GitHub NuGet source
+        run: dotnet nuget add source --username ${{ github.actor }} --password $GITHUB_TOKEN --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+
+      - name: Publish NuGet package to GitHub Packages
+        run: dotnet nuget push out/*.nupkg --api-key $GITHUB_TOKEN --source "github" --skip-duplicate
